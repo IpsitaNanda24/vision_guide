@@ -1,11 +1,18 @@
 import json
 import logging
+import os
 from typing import Dict, Any
+
+import sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from config.secrets import load_secrets
+load_secrets()
 
 from google.adk.agents.llm_agent import Agent
 from google.adk.runners import Runner
-from google.adk.sessions.in_memory import InMemorySessionService
+from google.adk.sessions import InMemorySessionService
 from google.genai import types
+from google.adk.a2a.utils.agent_card_builder import AgentCardBuilder
 
 try:
     # Attempt to import generic base class from a hypothetical shared location
@@ -131,3 +138,19 @@ For live sessions: Detect sounds and describe them in the transcript using brack
                     "urgency": "Caution",
                     "guidance": "An unexpected error occurred during audio analysis. Please try again."
                 }
+
+    async def get_agent_card(self) -> Dict[str, Any]:
+        """
+        Returns the A2A Agent Card for this agent.
+        """
+        builder = AgentCardBuilder(
+            agent=self.agent,
+            rpc_url="http://localhost:80/a2a",
+            agent_version="1.0.0",
+            doc_url="https://github.com/google/adk"
+        )
+        card = await builder.build()
+        
+        if hasattr(card, "model_dump"):
+            return card.model_dump(exclude_none=True)
+        return card.__dict__ if hasattr(card, "__dict__") else card
