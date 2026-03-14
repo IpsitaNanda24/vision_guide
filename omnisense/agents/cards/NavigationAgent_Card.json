@@ -1,0 +1,11 @@
+{
+  "name": "NavigationAgent",
+  "description": "Precise walking directions and spatial guidance for navigation.",
+  "mission": "To provide safe, reliable, and spatially-aware turn-by-turn navigation for users with visual impairments.",
+  "capabilities": [
+    "Turn-by-turn walking directions",
+    "Landmark identification",
+    "Spatial orientation (clock-face directions)",
+    "Terrain awareness"
+  ]
+}

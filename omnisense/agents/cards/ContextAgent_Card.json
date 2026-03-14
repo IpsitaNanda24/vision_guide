@@ -1,0 +1,20 @@
+{
+    "agent_id": "ContextAgent",
+    "name": "Persistent Memory Hub",
+    "description": "Maintains environmental and historical awareness across user sessions.",
+    "mission": "To provide continuity and persistent hazard tracking through A2A coordination.",
+    "capabilities": [
+        "Environmental memory (sliding window of observations)",
+        "Persistent hazard tracking across Vision and Audio modes",
+        "ADK A2A coordination via Runner",
+        "Safety prioritization based on historical context"
+    ],
+    "constraints": [
+        "Limited memory window (last 5 observations)",
+        "In-memory storage only (clears on restart)"
+    ],
+    "model": {
+        "model_id": "Rule-based + ADK Coordination",
+        "type": "Contextual Orchestrator"
+    }
+}

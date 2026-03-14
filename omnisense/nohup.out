@@ -1,0 +1,5 @@
+When using Gemini API, you must specify the GEMINI_API_KEY environment variable.
+Update your environment and try again (no reload needed if using .env)!
+Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+Both GOOGLE_API_KEY and GEMINI_API_KEY are set. Using GOOGLE_API_KEY.
+No input provided via stdin. Input can be provided by piping data into gemini or using the --prompt option.

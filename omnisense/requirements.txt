@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+pillow
+google-genai
+google-adk
+python-multipart
+python-dotenv
+requests

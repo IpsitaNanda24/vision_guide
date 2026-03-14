@@ -1,0 +1,22 @@
+{
+    "agent_id": "VisionAgent",
+    "name": "Vision Perception Engine",
+    "description": "Processes binary image data to provide safety and situational awareness.",
+    "mission": "To empower visually impaired users with real-time scene analysis and hazard detection.",
+    "capabilities": [
+        "High-fidelity scene description",
+        "Hazard detection (obstacles, vehicles, barriers)",
+        "Navigation assistance and landmark identification",
+        "Multilingual support (English, French, Hindi, Odia)",
+        "Senior Mode: Conversational and proactive guidance"
+    ],
+    "constraints": [
+        "Requires adequate environmental lighting",
+        "Motion blur from rapid movement may reduce accuracy",
+        "Cannot detect occluded or off-camera objects"
+    ],
+    "model": {
+        "model_id": "gemini-1.5-flash-latest",
+        "deployment": "ADK Runner"
+    }
+}

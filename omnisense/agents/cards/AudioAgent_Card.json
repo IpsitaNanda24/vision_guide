@@ -1,0 +1,21 @@
+{
+    "agent_id": "AudioAgent",
+    "name": "Acoustic Guard",
+    "description": "Analyzes environmental audio for safety-critical sound events.",
+    "mission": "To provide an extra layer of situational awareness via sound identification and categorization.",
+    "capabilities": [
+        "Sound event identification (Sirens, Alarms, Shouting)",
+        "Safety urgency categorization (CRITICAL, WARNING, NORMAL)",
+        "Actionable safety guidance generation",
+        "Senior Mode: Wellness reminders and companion talk"
+    ],
+    "constraints": [
+        "Accuracy decreases in extremely noisy environments",
+        "Discrete analysis performed on audio snippets",
+        "Distance affects microphone sensitivity and recognition"
+    ],
+    "model": {
+        "model_id": "gemini-1.5-flash-latest",
+        "deployment": "ADK Runner"
+    }
+}
